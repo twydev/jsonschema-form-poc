@@ -1,21 +1,20 @@
-import React, { Component } from 'react';
-import { render } from "react-dom";
+import React from 'react';
 import CreatableSelect from 'react-select/creatable';
 import Form from "react-jsonschema-form";
 
 import jsonSchema from "./jsonschema";
-import uiSchema from "./uischema"; 
+import uiSchema from "./uischema";
 
 const ReturnArray = class ReturnArray extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { 
-    	formData: props.formData
+    this.state = {
+      formData: props.formData
     };
-    this.options = props.schema.properties.itemName.enum;
-	this.handleProduct = this.handleProduct.bind(this);
-	this.handleQuantity = this.handleQuantity.bind(this);
-	console.log('Props', props);
+    this.options = props.schema.properties.productItem.enum;
+    this.handleProduct = this.handleProduct.bind(this);
+    this.handleQuantity = this.handleQuantity.bind(this);
+    console.log('Props', props);
   }
 
   // onChange(key) {
@@ -27,14 +26,14 @@ const ReturnArray = class ReturnArray extends React.Component {
   // }
 
   handleProduct(event) {
-  	const stateQuantity = this.state.formData.quantity;
-  	this.setState({ formData: { itemName: event, quantity: stateQuantity } }, () => this.props.onChange(this.state.formData))
-  	// this.setState({ formData: Object.assign({}, formData) })
+    const stateQuantity = this.state.formData.productQuantity;
+    const value = event.__isNew__ ? '000' : event.value;
+    this.setState({ formData: { productItem: { value, label: event.label }, productQuantity: stateQuantity } }, () => this.props.onChange(this.state.formData))
   }
 
   handleQuantity(event) {
-  	const stateName = this.state.formData.itemName;
-  	this.setState({ formData: { itemName: stateName, quantity: parseInt(event.target.value) } }, () => this.props.onChange(this.state.formData))
+    const stateItem = this.state.formData.productItem;
+    this.setState({ formData: { productItem: stateItem, productQuantity: parseInt(event.target.value) } }, () => this.props.onChange(this.state.formData))
   }
 
   render() {
@@ -46,10 +45,13 @@ const ReturnArray = class ReturnArray extends React.Component {
     // 	</div>
     // );
     return (
-    	<div>
-	      <CreatableSelect defaultValue={this.state.formData.itemName} options={this.options} onChange={this.handleProduct}/>	
-	      <input type='number' placeholder='returned amount' value={this.state.formData.quantity || ''} onChange={this.handleQuantity}/>
-    	</div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3"><CreatableSelect defaultValue={this.state.formData.productItem} options={this.options} onChange={this.handleProduct} /></div>
+          <div class="col-md-1"><input type='number' placeholder='Quantity' value={this.state.formData.productQuantity || ''} onChange={this.handleQuantity} /></div>
+          <div class="col-md-1"></div>
+        </div>
+      </div>
     );
   }
 }
@@ -60,49 +62,60 @@ const App = class App extends React.Component {
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.state = {
-    	formContext: {},
-      	formData: { 
-      		metaData: {
-      			created: new Date().toISOString()
-      		},
-      		"returnList": [
-      			{
-      				"itemName": {
-      					"value": '',
-      					"label": ''
-      				},
-      				"quantity": null
-      			}
-      		]
-      	}
+      "formContext": {},
+      "formData": {
+        "metaData": {
+          "created": new Date().toISOString()
+        },
+        "returnForm": [
+          {
+            "warehouse": '',
+            "returnList": [
+              {
+                "productItem": {
+                  "value": '',
+                  "label": ''
+                },
+                "productQuantity": null
+              }
+            ]
+          }
+        ]
+      }
     };
-    this.fields = {selectProduct: ReturnArray};
+    this.fields = { selectProduct: ReturnArray };
   };
-  
-  handleChange({formData}) {
-  	this.setState({ formData: Object.assign({}, formData) });
+
+  handleChange({ formData }) {
+    this.setState({ formData: Object.assign({}, formData) });
   }
-  
+
   handleSubmit(data) {
-  	// not important
+    // not important
   }
-  
+
   render() {
-  	return (
-    	<div style={{ marginLeft: '25%', marginRight: '25%'}}>
-        <h3>FormState:</h3>
-        <pre>{ JSON.stringify(this.state.formData,undefined,2,2) }</pre>
-    	  <Form 
-          safeRenderCompletion={true}
-          formData={this.state.formData}
-          formContext={this.state.formContext}
-          schema={jsonSchema} 
-          uiSchema={uiSchema}
-          fields={this.fields}
-          onChange={this.handleChange}
-          onSubmit={this.handleSubmit}
-        />
-    	</div>
+    return (
+      <div class="container">
+        <div class="row">
+          <div class="col-md-2"></div>
+          <div class="col-md-8">
+            <h3>FormState:</h3>
+            <pre>{JSON.stringify(this.state.formData, undefined, 2, 2)}</pre>
+            <Form
+              safeRenderCompletion={true}
+              formData={this.state.formData}
+              formContext={this.state.formContext}
+              schema={jsonSchema}
+              uiSchema={uiSchema}
+              fields={this.fields}
+              onChange={this.handleChange}
+              onSubmit={this.handleSubmit}
+            />
+          </div>
+          <div class="col-md-2"></div>
+        </div>
+      </div>
     );
   }
 }

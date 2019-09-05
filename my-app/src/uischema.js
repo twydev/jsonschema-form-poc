@@ -1,12 +1,19 @@
 const uiSchema = {
-    "returnList": {
-      "ui:options": {
-        "orderable": false
-      },
-      "items": {
-      	 "ui:field": "selectProduct"
+  "returnForm": {
+    "ui:options": {
+      "orderable": false
+    },
+    "items": {
+      "returnList": {
+        "ui:options": {
+          "orderable": false
+        },
+        "items": {
+          "ui:field": "selectProduct"
+        }
       }
     }
+  }
 }
 
 // const uiSchema = {
