@@ -1,9 +1,16 @@
-const uischema = {
-    "unorderable": {
+const uiSchema = {
+    "returnList": {
       "ui:options": {
         "orderable": false
+      },
+      "items": {
+      	 "ui:field": "selectProduct"
       }
     }
-  }
+}
 
-export default uischema;
+// const uiSchema = {
+// 	"ui:field": "selectArray"
+// }
+
+export default uiSchema;

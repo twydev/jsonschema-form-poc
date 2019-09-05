@@ -1,43 +1,47 @@
-const jsonschema = {
+const jsonSchema = {
     "definitions": {
-      "Thing": {
-        "type": "object",
-        "properties": {
-          "name": {
-            "type": "string",
-            "default": "Default name"
-          }
-        }
-      }
     },
     "type": "object",
     "properties": {
-      "unorderable": {
-        "title": "Unorderable items",
+      "warehouse": {
+        "type": "string",
+        "enum": [
+          "ChocoFactory", "LuzonHouse", "MagicFruitz"
+        ]
+      },
+      "returnList": {
+        "title": "List of Items to be Returned",
         "type": "array",
         "items": {
           "type": "object",
-          "anyOf": [
-            {
-              "title":"chococake",
-              "properties": {
-                "chococake": {
-                  "type": "number"
-                }
-              }
+          "properties": {
+            "itemName": {
+              "type": "object",
+              "enum": [
+                { value: 'SAP001', label: 'Chocolate' },
+                { value: 'SAP002', label: 'Strawberry' },
+                { value: 'SAP003', label: 'Vanilla' }
+              ]
             },
-            {
-              "title":"vanilladonut",
-              "properties": {
-                "vanilladonut": {
-                  "type": "number"
-                }
-              }
+            "quantity": {
+              "type": "number"
             }
-          ]
+          }
         }
       }
     }
   };
 
-export default jsonschema;
+// const jsonSchema = {
+//     "type": "object",
+//     "properties": {
+//       "name": { "type": "string" },
+//       "quantity": { "type": "number" }
+//     }
+// }
+
+// { value: 'WH01', label: 'ChocoFactory' },
+// { value: 'WH02', label: 'LuzonHouse' },
+// { value: 'WH03', label: 'MagicFruitz' }
+
+export default jsonSchema;
