@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "9867f4c370438d0de011548602961b86",
+    "revision": "081cec8d2f0e73b08dfcf30fc85ab9b6",
     "url": "/jsonschema-form-poc/my-app/index.html"
   },
   {
