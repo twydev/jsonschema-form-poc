@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/jsonschema-form-poc/my-app/static/css/main.498d002a.chunk.css",
+    "main.js": "/jsonschema-form-poc/my-app/static/js/main.dc942dd0.chunk.js",
+    "main.js.map": "/jsonschema-form-poc/my-app/static/js/main.dc942dd0.chunk.js.map",
+    "runtime~main.js": "/jsonschema-form-poc/my-app/static/js/runtime~main.e2c43b3d.js",
+    "runtime~main.js.map": "/jsonschema-form-poc/my-app/static/js/runtime~main.e2c43b3d.js.map",
+    "static/js/2.c9cad2d7.chunk.js": "/jsonschema-form-poc/my-app/static/js/2.c9cad2d7.chunk.js",
+    "static/js/2.c9cad2d7.chunk.js.map": "/jsonschema-form-poc/my-app/static/js/2.c9cad2d7.chunk.js.map",
+    "index.html": "/jsonschema-form-poc/my-app/index.html",
+    "precache-manifest.9830e058c753ecd170d4ad1216180a52.js": "/jsonschema-form-poc/my-app/precache-manifest.9830e058c753ecd170d4ad1216180a52.js",
+    "service-worker.js": "/jsonschema-form-poc/my-app/service-worker.js",
+    "static/css/main.498d002a.chunk.css.map": "/jsonschema-form-poc/my-app/static/css/main.498d002a.chunk.css.map"
+  }
+}
