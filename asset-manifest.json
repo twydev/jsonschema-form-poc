@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/jsonschema-form-poc/my-app/static/css/main.498d002a.chunk.css",
-    "main.js": "/jsonschema-form-poc/my-app/static/js/main.dc942dd0.chunk.js",
-    "main.js.map": "/jsonschema-form-poc/my-app/static/js/main.dc942dd0.chunk.js.map",
-    "runtime~main.js": "/jsonschema-form-poc/my-app/static/js/runtime~main.e2c43b3d.js",
-    "runtime~main.js.map": "/jsonschema-form-poc/my-app/static/js/runtime~main.e2c43b3d.js.map",
-    "static/js/2.c9cad2d7.chunk.js": "/jsonschema-form-poc/my-app/static/js/2.c9cad2d7.chunk.js",
-    "static/js/2.c9cad2d7.chunk.js.map": "/jsonschema-form-poc/my-app/static/js/2.c9cad2d7.chunk.js.map",
-    "index.html": "/jsonschema-form-poc/my-app/index.html",
-    "precache-manifest.1b89c5ea4798ab69e5a59c49e4a6356f.js": "/jsonschema-form-poc/my-app/precache-manifest.1b89c5ea4798ab69e5a59c49e4a6356f.js",
-    "service-worker.js": "/jsonschema-form-poc/my-app/service-worker.js",
-    "static/css/main.498d002a.chunk.css.map": "/jsonschema-form-poc/my-app/static/css/main.498d002a.chunk.css.map"
+    "main.css": "/jsonschema-form-poc/static/css/main.498d002a.chunk.css",
+    "main.js": "/jsonschema-form-poc/static/js/main.bfa03af0.chunk.js",
+    "main.js.map": "/jsonschema-form-poc/static/js/main.bfa03af0.chunk.js.map",
+    "runtime~main.js": "/jsonschema-form-poc/static/js/runtime~main.9b5fca39.js",
+    "runtime~main.js.map": "/jsonschema-form-poc/static/js/runtime~main.9b5fca39.js.map",
+    "static/js/2.c9cad2d7.chunk.js": "/jsonschema-form-poc/static/js/2.c9cad2d7.chunk.js",
+    "static/js/2.c9cad2d7.chunk.js.map": "/jsonschema-form-poc/static/js/2.c9cad2d7.chunk.js.map",
+    "index.html": "/jsonschema-form-poc/index.html",
+    "precache-manifest.ee01f762ed6731c2a7fe309cfe8a2944.js": "/jsonschema-form-poc/precache-manifest.ee01f762ed6731c2a7fe309cfe8a2944.js",
+    "service-worker.js": "/jsonschema-form-poc/service-worker.js",
+    "static/css/main.498d002a.chunk.css.map": "/jsonschema-form-poc/static/css/main.498d002a.chunk.css.map"
   }
 }
