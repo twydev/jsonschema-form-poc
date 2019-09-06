@@ -33,9 +33,9 @@ const ReturnArray = class ReturnArray extends React.Component {
       <div className="row">
         <div className="col-sm-9"><CreatableSelect defaultValue={this.state.formData.productItem} options={this.options} onChange={this.handleProduct} /></div>
         <div className="col-sm-3" style={{paddingLeft: '0', paddingTop: '2px'}}>
-    	  <div className="form-group">
-    	    <input className="form-control" type='number' placeholder='Qty' value={this.state.formData.productQuantity || ''} onChange={this.handleQuantity} />
-    	  </div>
+    	    <div className="form-group">
+    	      <input className="form-control" type='number' placeholder='Qty' value={this.state.formData.productQuantity || ''} onChange={this.handleQuantity} />
+    	    </div>
         </div>
       </div>
     );
@@ -81,7 +81,6 @@ const App = class App extends React.Component {
   }
 
   render() {
-    console.log('this is process.env.PUBLIC_URL', process.env.PUBLIC_URL);
     return (
       <div className="container">
         <div className="row">

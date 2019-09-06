@@ -7,7 +7,7 @@ import { BrowserRouter as Router } from 'react-router-dom';
 import { Route } from 'react-router';
 
 ReactDOM.render(
-	<Router basename={process.env.PUBLIC_URL}>
+	<Router basename="/my-app">
 		<Route exact path={`/`} render={ (routerProps) => <App routerProps={routerProps}/>}/>
 	</Router>,
  document.getElementById('root'));
