@@ -16,8 +16,4 @@ const uiSchema = {
   }
 }
 
-// const uiSchema = {
-// 	"ui:field": "selectArray"
-// }
-
 export default uiSchema;

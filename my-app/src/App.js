@@ -17,14 +17,6 @@ const ReturnArray = class ReturnArray extends React.Component {
     console.log('Props', props);
   }
 
-  // onChange(key) {
-  //   return (event) => {
-  //     this.setState({
-  //       [key]: event.target.value
-  //     }, () => this.props.onChange(this.state));
-  //   };
-  // }
-
   handleProduct(event) {
     const stateQuantity = this.state.formData.productQuantity;
     const value = event.__isNew__ ? '000' : event.value;
@@ -37,19 +29,13 @@ const ReturnArray = class ReturnArray extends React.Component {
   }
 
   render() {
-    // return (
-    // 	<div>
-    //    <h3>formData:</h3>
-    //    <pre>{ JSON.stringify(this.state.formData,undefined,2,2) }</pre>
-    //    <Select defaultValue={this.state.formData} options={this.options} onChange={this.handleChange}/>	
-    // 	</div>
-    // );
     return (
-      <div class="container">
-        <div class="row">
-          <div class="col-md-3"><CreatableSelect defaultValue={this.state.formData.productItem} options={this.options} onChange={this.handleProduct} /></div>
-          <div class="col-md-1"><input type='number' placeholder='Quantity' value={this.state.formData.productQuantity || ''} onChange={this.handleQuantity} /></div>
-          <div class="col-md-1"></div>
+      <div className="row">
+        <div className="col-sm-9"><CreatableSelect defaultValue={this.state.formData.productItem} options={this.options} onChange={this.handleProduct} /></div>
+        <div className="col-sm-3" style={{paddingLeft: '0', paddingTop: '2px'}}>
+    	  <div className="form-group">
+    	    <input className="form-control" type='number' placeholder='Qty' value={this.state.formData.productQuantity || ''} onChange={this.handleQuantity} />
+    	  </div>
         </div>
       </div>
     );
@@ -90,18 +76,21 @@ const App = class App extends React.Component {
     this.setState({ formData: Object.assign({}, formData) });
   }
 
-  handleSubmit(data) {
-    // not important
+  handleSubmit({ formData }) {
+    console.log(formData);
   }
 
   render() {
+    console.log('this is process.env.PUBLIC_URL', process.env.PUBLIC_URL);
     return (
-      <div class="container">
-        <div class="row">
-          <div class="col-md-2"></div>
-          <div class="col-md-8">
-            <h3>FormState:</h3>
+      <div className="container">
+        <div className="row">
+          <div className="col-sm-5">
+            <h3>formData</h3>
+            <p>This is the formData that the app will generate onSubmit</p>
             <pre>{JSON.stringify(this.state.formData, undefined, 2, 2)}</pre>
+          </div>
+          <div className="col-sm-7">
             <Form
               safeRenderCompletion={true}
               formData={this.state.formData}
@@ -113,12 +102,10 @@ const App = class App extends React.Component {
               onSubmit={this.handleSubmit}
             />
           </div>
-          <div class="col-md-2"></div>
         </div>
       </div>
     );
   }
 }
-
 
 export default App;
