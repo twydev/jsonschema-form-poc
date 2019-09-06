@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/jsonschema-form-poc/static/css/main.498d002a.chunk.css",
-    "main.js": "/jsonschema-form-poc/static/js/main.b0f1efac.chunk.js",
-    "main.js.map": "/jsonschema-form-poc/static/js/main.b0f1efac.chunk.js.map",
+    "main.js": "/jsonschema-form-poc/static/js/main.8684bd24.chunk.js",
+    "main.js.map": "/jsonschema-form-poc/static/js/main.8684bd24.chunk.js.map",
     "runtime~main.js": "/jsonschema-form-poc/static/js/runtime~main.9b5fca39.js",
     "runtime~main.js.map": "/jsonschema-form-poc/static/js/runtime~main.9b5fca39.js.map",
     "static/js/2.c9cad2d7.chunk.js": "/jsonschema-form-poc/static/js/2.c9cad2d7.chunk.js",
     "static/js/2.c9cad2d7.chunk.js.map": "/jsonschema-form-poc/static/js/2.c9cad2d7.chunk.js.map",
     "index.html": "/jsonschema-form-poc/index.html",
-    "precache-manifest.9907f693b2833d63699f1297e59b0148.js": "/jsonschema-form-poc/precache-manifest.9907f693b2833d63699f1297e59b0148.js",
+    "precache-manifest.4ece05aa43b22d9fba4314a2e0fa56ec.js": "/jsonschema-form-poc/precache-manifest.4ece05aa43b22d9fba4314a2e0fa56ec.js",
     "service-worker.js": "/jsonschema-form-poc/service-worker.js",
     "static/css/main.498d002a.chunk.css.map": "/jsonschema-form-poc/static/css/main.498d002a.chunk.css.map"
   }

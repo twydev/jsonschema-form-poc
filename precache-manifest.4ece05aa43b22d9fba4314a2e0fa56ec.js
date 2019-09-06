@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "a81d381f099297242097b2dc1d5d2b84",
+    "revision": "365f54e18ae8242daeede9e49a5561cd",
     "url": "/jsonschema-form-poc/index.html"
   },
   {
-    "revision": "fcb8fad0175a1978c81b",
+    "revision": "da0e6de902024ce79cd6",
     "url": "/jsonschema-form-poc/static/css/main.498d002a.chunk.css"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/jsonschema-form-poc/static/js/2.c9cad2d7.chunk.js"
   },
   {
-    "revision": "fcb8fad0175a1978c81b",
-    "url": "/jsonschema-form-poc/static/js/main.b0f1efac.chunk.js"
+    "revision": "da0e6de902024ce79cd6",
+    "url": "/jsonschema-form-poc/static/js/main.8684bd24.chunk.js"
   },
   {
     "revision": "48fc5ff63d608aaa6038",
